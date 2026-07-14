@@ -1,0 +1,45 @@
+-- CREATE DATABASE sample_db
+-- -- CREATE DATABASE SAMPLE_DB; 
+-- -- USE sample_db;
+-- DROP DATABASE sample_db
+
+-- -- SHOW TABLES;
+
+-- CREATE TABLE first_tb(
+-- 	pr_id INT,
+--     P_name VARCHAR(55),
+--     phone_no VARCHAR(11),
+--     gender VARCHAR(10)
+-- --);
+
+-- INSERT INTO first_tb VALUES(1,"Chetan Babool","8360915667","Male");
+
+-- INSERT INTO first_tb (P_name) VALUES ("Mohit");
+-- INSERT INTO first_tb VALUES("Sahil");
+
+-- SELECT * FROM first_tb;--  -----> show table's data
+
+-- INSERT INTO first_tb (phone_no)VALUES("7418529630")
+
+-- DROP TABLE IF EXISTS first_tb;
+
+-- ALTER
+
+-- ALTER TABLE first_tb ADD DOB DATE;
+
+
+-- INSERT INTO first_tb VALUES(1,"Chetan","7896541230",'male','2001-12-24') 
+
+-- SELECT * FROM first_tb;
+
+ALTER TABLE first_tb
+DROP column DOB;
+
+ALTER TABLE person_data
+ADD COLUMN dob
+
+ALTER TABLE first_tb
+RENAME COLUMN DOB to dob;
+
+ALTER TABLE first_tb
+RENAME person_data;
