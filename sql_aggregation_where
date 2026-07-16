@@ -1,0 +1,56 @@
+CREATE DATABASE cb_db;
+use cb_db;
+
+p_id
+p_name
+f_name
+phone_no
+gender
+
+CREATE TABLE p_info(
+	p_id varchar(15) NOT NULL,
+	p_name varchar(55),
+	f_name varchar(55),
+	phone_no varchar(15),
+	gender varchar(55),
+    age int
+);
+
+
+INSERT INTO p_info VALUE ("#6","Radhika Sharma","Ashok Sharma","7888561230","F",19);
+
+INSERT INTO p_info VALUES ("#2","Mohit Sharma","Ramesh Sharma","7894561230","M",19),
+("#3","Rohit Sharma","Ramesh Sharma","784561230","M",21),
+("#4","Radhika Sharma","Bhupinder Sharma","7888561230","F",19),
+("#5","Manpreet Kaur Nagra","Jagtar Singh Nagra","000000","F",20);
+
+INSERT INTO p_info(p_id,p_name,phone_no,gender,age) VAlUES ("#7","Sahil","789654120","M",20);
+
+SELECT * FROM p_info;
+
+SELECT p_name,phone_no FROM p_info;
+
+SELECT DISTINCT gender FROM p_info;
+
+SELECT DISTINCT p_name,f_name FROM p_info;
+
+
+SELECT MIN(age) FROM p_info;
+SELECT MAX(age) FROM p_info;
+SELECT AVG(age) FROM p_info;
+SELECT SUM(age) FROM p_info;
+
+SELECT * FROM p_info WHERE f_name IS NULL;
+
+
+SELECT p_name FROM p_info 
+WHERE age > 21;
+
+TRUNCATE TABLE p_info;
+
+SELECT * FROM p_info; 
+
+SELECT COUNT(p_id) FROM p_info;
+
+SELECT p_name,age FROM p_info
+WHERE age BETWEEN 24 AND 30;
